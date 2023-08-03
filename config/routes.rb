@@ -1,7 +1,18 @@
 Rails.application.routes.draw do
-  resources :colaborators
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  
+  resources :colaborators do
+    member do
+      get 'preview'
+    end
+    collection do
+      get 'search'
+    end
+  end
+  
+  resources :colaborators
+
 
   # Defines the root path route ("/")
-  # root "articles#index"
+  root 'colaborators#index'
 end

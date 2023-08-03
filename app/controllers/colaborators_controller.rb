@@ -56,6 +56,14 @@ class ColaboratorsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  # Member action
+  def preview
+  end
+
+  # Collection action
+  def search
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
