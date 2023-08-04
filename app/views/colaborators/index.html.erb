@@ -1,7 +1,14 @@
 <p style="color: green"><%= notice %></p>
-
 <h1>Colaborators</h1>
-
+<hr>
+<%= form_with url: colaborators_path, method: :get do |form|%>
+  <%= 
+  form.text_field :query_text, 
+  placeholder: "Ingresa tu búsqueda", 
+  value: params[:query_text]
+  %>
+<%end%>
+<hr>
 <div id="colaborators">
   <% @colaborators.each do |colaborator| %>
     <%= render colaborator %>
@@ -10,5 +17,9 @@
     </p>
   <% end %>
 </div>
+<p>
+  <%= link_to "New colaborator", new_colaborator_path %>
+</p>
 
-<%= link_to "New colaborator", new_colaborator_path %>
+<%=raw pagy_nav(@pagy)%>
+
