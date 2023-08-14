@@ -8,7 +8,7 @@
 
 puts ("Creating 50 Colaborators...")
 
-200.times do |_i|
+50.times do |_i|
   name = Faker::Name.name
   email = Faker::Internet.email
   address = Faker::Address.full_address

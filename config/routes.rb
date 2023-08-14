@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   
   resources :colaborators
 
-
   # Defines the root path route ("/")
   root 'colaborators#index'
 end
